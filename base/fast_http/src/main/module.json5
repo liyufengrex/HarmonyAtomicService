@@ -1,0 +1,10 @@
+{
+  "module": {
+    "name": "fast_http",
+    "type": "har",
+    "deviceTypes": [
+      "default",
+      "tablet"
+    ]
+  }
+}

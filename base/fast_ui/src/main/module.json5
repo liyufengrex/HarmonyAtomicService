@@ -1,0 +1,10 @@
+{
+  "module": {
+    "name": "fast_ui",
+    "type": "har",
+    "deviceTypes": [
+      "default",
+      "tablet"
+    ]
+  }
+}

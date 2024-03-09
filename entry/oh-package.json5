@@ -1,0 +1,16 @@
+{
+  "name": "entry",
+  "version": "1.0.0",
+  "description": "Please describe the basic information.",
+  "main": "",
+  "author": "",
+  "license": "",
+  "dependencies": {
+    "@ohos/fast_http": "file:../base/fast_http",
+    "@ohos/fast_ui": "file:../base/fast_ui",
+    "@ohos/global_constant": "file:../base/global_constant",
+    "@ohos/feature_home": "file:../features/feature_home",
+    "@ohos/feature_setting": "file:../features/feature_setting"
+  }
+}
+

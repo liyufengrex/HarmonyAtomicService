@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "page_show",
+      "value": "page from package"
+    },
+    {
+      "name": "common_example",
+      "value": "常用示例"
+    },
+    {
+      "name": "http_example",
+      "value": "网络请求示例"
+    }
+  ]
+}

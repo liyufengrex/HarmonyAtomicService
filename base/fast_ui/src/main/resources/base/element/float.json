@@ -1,0 +1,40 @@
+{
+  "float": [
+    {
+      "name": "font_nav_title",
+      "value": "17fp"
+    },
+    {
+      "name": "font_title",
+      "value": "15fp"
+    },
+    {
+      "name": "font_sub_title",
+      "value": "11fp"
+    },
+    {
+      "name": "font_default",
+      "value": "14fp"
+    },
+    {
+      "name": "font_small",
+      "value": "12fp"
+    },
+    {
+      "name": "font_smaller",
+      "value": "10fp"
+    },
+    {
+      "name": "button_default_height",
+      "value": "40vp"
+    },
+    {
+      "name": "button_default_radius",
+      "value": "20vp"
+    },
+    {
+      "name": "padding_default",
+      "value": "15vp"
+    }
+  ]
+}

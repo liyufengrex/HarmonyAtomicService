@@ -1,0 +1,40 @@
+{
+  "color": [
+    {
+      "name": "primary",
+      "value": "#F3F4F5"
+    },
+    {
+      "name": "secondary",
+      "value": "#698D04"
+    },
+    {
+      "name": "disabled",
+      "value": "#C4C4C4"
+    },
+    {
+      "name": "text_main",
+      "value": "#242524"
+    },
+    {
+      "name": "text_sub",
+      "value": "#6F7275"
+    },
+    {
+      "name": "text_button_2",
+      "value": "#FFA0A4A7"
+    },
+    {
+      "name": "text_desc",
+      "value": "#86888B"
+    },
+    {
+      "name": "divider",
+      "value": "#FFE2E5E7"
+    },
+    {
+      "name": "border_color",
+      "value": "#FFA0A4A7"
+    }
+  ]
+}

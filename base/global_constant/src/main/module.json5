@@ -1,0 +1,10 @@
+{
+  "module": {
+    "name": "global_constant",
+    "type": "har",
+    "deviceTypes": [
+      "default",
+      "tablet"
+    ]
+  }
+}

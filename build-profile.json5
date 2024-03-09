@@ -1,0 +1,58 @@
+{
+  "app": {
+    "signingConfigs": [
+
+    ],
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+        "compileSdkVersion": "4.1.0(11)",
+        "compatibleSdkVersion": "4.1.0(11)",
+        "runtimeOS": "HarmonyOS",
+      }
+    ],
+    "buildModeSet": [
+      {
+        "name": "debug",
+      },
+      {
+        "name": "release"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "fast_http",
+      "srcPath": "./base/fast_http"
+    },
+    {
+      "name": "feature_home",
+      "srcPath": "./features/feature_home"
+    },
+    {
+      "name": "feature_setting",
+      "srcPath": "./features/feature_setting"
+    },
+    {
+      "name": "fast_ui",
+      "srcPath": "./base/fast_ui"
+    },
+    {
+      "name": "global_constant",
+      "srcPath": "./base/global_constant"
+    }
+  ]
+}
