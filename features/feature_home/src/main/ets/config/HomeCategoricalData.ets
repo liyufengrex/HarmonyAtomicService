@@ -16,6 +16,14 @@ export const COMMON_EXAMPLES: SubCategory[] =
       title: $r('app.string.http_example'),
       url: PagePathConstants.PAGE_HTTP_REQUEST,
     },
+    {
+      title: $r('app.string.event_bus_example'),
+      url: PagePathConstants.PAGE_EVENT_BUS,
+    },
+    {
+      title: $r('app.string.custom_dialog_example'),
+      url: PagePathConstants.PAGE_CUSTOM_DIALOG,
+    },
   ];
 
 export const HOME_CATEGORIES: Category[] =

@@ -5,6 +5,13 @@ interface CommonButtonOption {
   fontColor?: Resource;
   fontSize?: number | Resource;
   fontWeight?: number | FontWeight;
+  horizontalPadding?: number | Resource | string;
+  verticalPadding?: number | Resource | string;
+  marginLeft?: number | Resource | string;
+  marginTop?: number | Resource | string;
+  marginRight?: number | Resource | string;
+  marginBottom?: number | Resource | string;
+  borderRadius?: number | Resource | string;
   text: string | Resource;
   event: () => void;
 }
@@ -14,22 +21,26 @@ interface CommonButtonOption {
 function CommonFillButton(
   option: CommonButtonOption
 ) {
-  Button(option.text,
-    {
-      type: ButtonType.Normal,
-      stateEffect: true
-    })
-    .fontColor(option.fontColor ?? $r('app.color.primary'))
-    .fontWeight(option.fontWeight ?? FontWeight.Normal)
+  Text(option.text)
     .fontSize(option.fontSize ?? $r('app.float.font_default'))
+    .fontWeight(option.fontWeight ?? FontWeight.Normal)
+    .fontColor(option.fontColor ?? $r('app.color.primary'))
     .backgroundColor(option.backGroundColor ?? $r('app.color.secondary'))
     .padding({
-      left: 18,
-      top: 6,
-      right: 18,
-      bottom: 6
+      left: option.horizontalPadding ?? '11vp',
+      top: option.verticalPadding ?? '6vp',
+      right: option.horizontalPadding ?? '11vp',
+      bottom: option.verticalPadding ?? '6vp',
     })
-    .borderRadius('3vp')
+    .margin(
+      {
+        left: option.marginLeft,
+        top: option.marginTop,
+        right: option.marginRight,
+        bottom: option.marginBottom,
+      }
+    )
+    .borderRadius(option.borderRadius ?? '5vp')
     .onClick(option.event)
 }
 
@@ -38,11 +49,7 @@ function CommonFillButton(
 function CommonLineButton(
   option: CommonButtonOption
 ) {
-  Button(option.text,
-    {
-      type: ButtonType.Normal,
-      stateEffect: true
-    })
+  Text(option.text)
     .fontColor(option.fontColor ?? $r('app.color.text_button_2'))
     .fontWeight(option.fontWeight ?? FontWeight.Normal)
     .fontSize(option.fontSize ?? $r('app.float.font_default'))
@@ -50,12 +57,12 @@ function CommonLineButton(
     .borderColor(option.borderColor ?? $r('app.color.border_color'))
     .borderWidth(1)
     .padding({
-      left: 18,
-      top: 6,
-      right: 18,
-      bottom: 6
+      left: option.horizontalPadding ?? '11vp',
+      top: option.verticalPadding ?? '6vp',
+      right: option.horizontalPadding ?? '11vp',
+      bottom: option.verticalPadding ?? '6vp',
     })
-    .borderRadius('3vp')
+    .borderRadius(option.borderRadius ?? '5vp')
     .onClick(option.event)
 }
 

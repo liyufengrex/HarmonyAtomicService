@@ -1,7 +1,7 @@
 /// 网络请求示例
-import { HttpRequest } from '@ohos/fast_http/Index'
 import { http } from '@kit.NetworkKit'
-import { CommonFillButton, CommonMainTitle, CommonSubTitle, FastLoadingDialog } from '@ohos/fast_ui/Index'
+import { HttpRequest } from '@rex/fast_https_request/Index';
+import { CommonFillButton, CommonMainTitle, CommonSubTitle, FastLoadingDialog, FastToast } from '@ohos/fast_ui/Index'
 
 @Extend(Column)
 function ColumnStyle() {
@@ -73,7 +73,9 @@ export struct HttpRequestExample {
       const response = await request.execute()
       this.responseTxt = JSON.stringify(response);
     } catch (e) {
-      this.responseTxt = JSON.stringify(e);
+      let errorMessage = JSON.stringify(e);
+      this.responseTxt = errorMessage;
+      FastToast.shortToast(errorMessage)
     } finally {
       this.loadingDialog.close()
     }
@@ -85,7 +87,7 @@ class GetRequest extends HttpRequest<CommonResponseModel<ResponseModel>> {
   // 重写请求类型，默认是 POST
   public method: http.RequestMethod = http.RequestMethod.GET;
   // 重写域名domain
-  public domain: string = 'https://api.uomg.com';
+  public domain: string = 'https://api.uomg123.com';
   // 重写请求路径
   public path: string = '/api/rand.music';
   // GET 传参赋值

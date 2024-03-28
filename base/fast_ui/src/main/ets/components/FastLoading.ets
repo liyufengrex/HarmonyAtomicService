@@ -12,26 +12,35 @@ function cardStyle() {
 }
 
 @Extend(Text)
-function messageStyle(fontSize: number | Resource | string, fontWeight: number) {
+function messageStyle(
+  fontSize: number | Resource | string,
+  fontWeight: number | FontWeight | string
+) {
   .fontSize(fontSize)
   .fontWeight(fontWeight)
 }
 
 @Component
 export struct FastLoading {
-  messageFontSize: number | Resource | string = 16
-  messageFontWeight: number = 600
-  message: string | Resource = $r('app.string.loading')
+  loadingSize: Length = '40vp'
+  messageFontSize: number | Resource | string = '16fp'
+  messageFontWeight: number | FontWeight | string = FontWeight.Medium
+  message: string | Resource | null = $r('app.string.loading')
 
   build() {
     Row({ space: 3 }) {
-      Text(this.message).messageStyle(this.messageFontSize, this.messageFontWeight)
+      Text(this.message)
+        .messageStyle(
+          this.messageFontSize,
+          this.messageFontWeight
+        )
+        .visibility(this.message != null ? Visibility.Visible : Visibility.None)
       LoadingProgress()
-        .width(40)
-        .height(40)
+        .width(this.loadingSize)
+        .height(this.loadingSize)
         .color($r('app.color.secondary'))
     }
-    .padding(10)
+    .padding('10vp')
     .justifyContent(FlexAlign.Center)
   }
 }

@@ -1,9 +1,13 @@
 /// 统一样式的 Text
 
 interface CommonTextOption {
-  fontColor?: Resource;
-  fontSize?: number | Resource;
+  fontColor?: string | Resource;
+  fontSize?: number | Resource | string;
   fontWeight?: number | FontWeight;
+  lineHeight?: number | string | Resource;
+  textAlign?: TextAlign
+  overflow?: TextOverflow
+  maxLines?: number
   text: string | Resource;
 }
 
@@ -14,7 +18,11 @@ function CommonMainTitle(
   Text(option.text)
     .fontSize(option.fontSize ?? $r('app.float.font_title'))
     .fontColor(option.fontColor ?? $r('app.color.text_main'))
-    .fontWeight(option.fontWeight ?? FontWeight.Normal)
+    .fontWeight(option.fontWeight ?? FontWeight.Medium)
+    .lineHeight(option.lineHeight)
+    .textAlign(option.textAlign)
+    .maxLines(option.maxLines)
+    .textOverflow({ overflow: option.overflow ?? TextOverflow.None })
 }
 
 @Builder
@@ -25,6 +33,10 @@ function CommonSubTitle(
     .fontSize(option.fontSize ?? $r('app.float.font_sub_title'))
     .fontColor(option.fontColor ?? $r('app.color.text_sub'))
     .fontWeight(option.fontWeight ?? FontWeight.Normal)
+    .lineHeight(option.lineHeight)
+    .textAlign(option.textAlign)
+    .maxLines(option.maxLines)
+    .textOverflow({ overflow: option.overflow ?? TextOverflow.None })
 }
 
 export { CommonMainTitle, CommonSubTitle }

@@ -1,6 +1,6 @@
 {
   "module": {
-    "name": "fast_http",
+    "name": "fast_util",
     "type": "har",
     "deviceTypes": [
       "default",

@@ -1,5 +1,5 @@
 /// 首页
-import { Category, SubCategory, HOME_CATEGORIES } from '../config/HomeCategoricalData';
+import { Category, SubCategory, HOME_CATEGORIES } from './config/HomeCategoricalData';
 
 
 @Extend(Column)

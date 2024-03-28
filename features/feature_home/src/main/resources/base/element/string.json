@@ -11,6 +11,14 @@
     {
       "name": "http_example",
       "value": "网络请求示例"
+    },
+    {
+      "name": "event_bus_example",
+      "value": "EventBus 事件通知示例"
+    },
+    {
+      "name": "custom_dialog_example",
+      "value": "自定义弹窗示例"
     }
   ]
 }

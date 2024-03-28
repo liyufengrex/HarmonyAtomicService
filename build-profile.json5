@@ -1,8 +1,6 @@
 {
   "app": {
-    "signingConfigs": [
-
-    ],
+    "signingConfigs": [],
     "products": [
       {
         "name": "default",
@@ -35,10 +33,6 @@
       ]
     },
     {
-      "name": "fast_http",
-      "srcPath": "./base/fast_http"
-    },
-    {
       "name": "feature_home",
       "srcPath": "./features/feature_home"
     },
@@ -53,6 +47,10 @@
     {
       "name": "global_constant",
       "srcPath": "./base/global_constant"
+    },
+    {
+      "name": "fast_util",
+      "srcPath": "./base/fast_util"
     }
   ]
 }

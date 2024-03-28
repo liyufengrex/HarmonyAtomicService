@@ -1,4 +1,4 @@
-import { HomePage, HttpRequestExample } from '@ohos/feature_home/Index'
+import { CustomDialogExample, EventBusExample, HomePage, HttpRequestExample } from '@ohos/feature_home/Index'
 import { PagePathConstants } from '@ohos/global_constant/Index'
 
 enum TabItemEnum {
@@ -47,16 +47,23 @@ function tabLabelStyle() {
 @Entry
 @Component
 struct MainPage {
-
   @Provide('navPathStack') navPathStack: NavPathStack = new NavPathStack();
   @State currentTab: HomeTabItem = homeTabs[0];
 
+  // 路由跳转控制
   @Builder
   PageMap(name: string) {
     if (name === PagePathConstants.PAGE_HTTP_REQUEST) {
       HttpRequestExample()
+    } else if (name === PagePathConstants.PAGE_EVENT_BUS) {
+      EventBusExample()
+    } else if (name === PagePathConstants.PAGE_CUSTOM_DIALOG) {
+      CustomDialogExample()
     } else {
-      Text('other')
+      NavDestination() {
+        Text('other')
+      }
+      .title('other')
     }
   }
 
@@ -84,7 +91,7 @@ struct MainPage {
             if (this.currentTab.type == TabItemEnum.home) {
               HomePage()
             } else {
-              Text(index.toString())
+              Text()
             }
           }
           .tabBar(
@@ -92,6 +99,8 @@ struct MainPage {
           )
         })
       }
+      .scrollable(false)
+      .animationDuration(0)
       .barHeight('48vp')
       .onChange((index) => {
         this.currentTab = homeTabs[index]
