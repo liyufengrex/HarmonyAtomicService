@@ -27,7 +27,7 @@ struct PageA {
   @State receivedData: string = ''
 
   aboutToAppear(): void {
-    EventBus.listen<String>('TestEventID', (data) => {
+    EventBus.listen<TestEventModule>('TestEventID', (data) => {
       if (data !== undefined) {
         this.receivedData = JSON.stringify(data)
       }
