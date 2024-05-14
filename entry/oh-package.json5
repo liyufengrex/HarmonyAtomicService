@@ -8,8 +8,8 @@
   "dependencies": {
     "@ohos/fast_ui": "file:../base/fast_ui",
     "@ohos/global_constant": "file:../base/global_constant",
-    "@ohos/feature_home": "file:../features/feature_home",
-    "@ohos/feature_setting": "file:../features/feature_setting"
+    "@ohos/feature_home": "file:../business/feature_home",
+    "@ohos/feature_setting": "file:../business/feature_setting"
   }
 }
 

@@ -1,0 +1,14 @@
+{
+  "name": "feature_home",
+  "version": "1.0.0",
+  "description": "Please describe the basic information.",
+  "main": "Index.ets",
+  "author": "",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@ohos/fast_ui": "file:../../base/fast_ui",
+    "@ohos/fast_util": "file:../../base/fast_util",
+    "@rex/fast_https_request": "1.0.1",
+    "@ohos/global_constant": "file:../../base/global_constant",
+  }
+}
