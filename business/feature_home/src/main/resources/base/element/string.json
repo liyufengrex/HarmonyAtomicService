@@ -19,6 +19,10 @@
     {
       "name": "custom_dialog_example",
       "value": "自定义弹窗示例"
+    },
+    {
+      "name": "router_callback_example",
+      "value": "两种路由跳转回调示例"
     }
   ]
 }

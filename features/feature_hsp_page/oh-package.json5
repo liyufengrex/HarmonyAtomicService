@@ -1,0 +1,13 @@
+{
+  "name": "feature_hsp_page",
+  "version": "1.0.0",
+  "description": "Please describe the basic information.",
+  "main": "Index.ets",
+  "author": "",
+  "license": "Apache-2.0",
+  "packageType": "InterfaceHar",
+  "dependencies": {
+    "@ohos/fast_ui": "file:../../base/fast_ui",
+    "@ohos/fast_util": "file:../../base/fast_util"
+  }
+}

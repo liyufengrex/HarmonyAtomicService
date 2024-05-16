@@ -1,4 +1,12 @@
-import { CustomDialogExample, EventBusExample, HomePage, HttpRequestExample } from '@ohos/feature_home/Index'
+import { RouterModel } from '@ohos/fast_util/Index'
+import {
+  CustomDialogExample,
+  EventBusExample,
+  HomePage,
+  HttpRequestExample,
+  RouterCallbackExample,
+  TestNavPathPage
+} from '@ohos/feature_home/Index'
 import { PagePathConstants } from '@ohos/global_constant/Index'
 
 enum TabItemEnum {
@@ -52,13 +60,19 @@ struct MainPage {
 
   // 路由跳转控制
   @Builder
-  PageMap(name: string) {
+  PageMap(name: string, params?: RouterModel) {
     if (name === PagePathConstants.PAGE_HTTP_REQUEST) {
       HttpRequestExample()
     } else if (name === PagePathConstants.PAGE_EVENT_BUS) {
       EventBusExample()
     } else if (name === PagePathConstants.PAGE_CUSTOM_DIALOG) {
       CustomDialogExample()
+    } else if (name === PagePathConstants.PAGE_ROUTER_CALLBACK) {
+      RouterCallbackExample()
+    } else if (name === PagePathConstants.PAGE_NAV_ROUTER_TEST) {
+      TestNavPathPage({
+        routerParams: params
+      })
     } else {
       NavDestination() {
         Text('other')

@@ -1,6 +1,8 @@
 {
   "app": {
-    "signingConfigs": [],
+    "signingConfigs": [
+
+    ],
     "products": [
       {
         "name": "default",
@@ -34,11 +36,11 @@
     },
     {
       "name": "feature_home",
-      "srcPath": "./features/feature_home"
+      "srcPath": "./business/feature_home"
     },
     {
       "name": "feature_setting",
-      "srcPath": "./features/feature_setting"
+      "srcPath": "./business/feature_setting"
     },
     {
       "name": "fast_ui",
@@ -51,6 +53,18 @@
     {
       "name": "fast_util",
       "srcPath": "./base/fast_util"
+    },
+    {
+      "name": "feature_hsp_page",
+      "srcPath": "./features/feature_hsp_page",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
     }
   ]
 }

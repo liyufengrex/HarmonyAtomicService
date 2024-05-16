@@ -1,0 +1,14 @@
+{
+  "module": {
+    "name": "feature_hsp_page",
+    "type": "shared",
+    "description": "$string:shared_desc",
+    "deviceTypes": [
+      "phone",
+      "tablet"
+    ],
+    "deliveryWithInstall": true,
+    "installationFree": true,
+    "pages": "$profile:main_pages"
+  }
+}

@@ -24,6 +24,10 @@ export const COMMON_EXAMPLES: SubCategory[] =
       title: $r('app.string.custom_dialog_example'),
       url: PagePathConstants.PAGE_CUSTOM_DIALOG,
     },
+    {
+      title: $r('app.string.router_callback_example'),
+      url: PagePathConstants.PAGE_ROUTER_CALLBACK,
+    },
   ];
 
 export const HOME_CATEGORIES: Category[] =
