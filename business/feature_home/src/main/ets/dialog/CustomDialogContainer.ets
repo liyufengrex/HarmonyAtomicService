@@ -37,7 +37,7 @@ export struct CustomDialogContainer {
           }
         }
       ),
-      alignment: DialogAlignment.Bottom,
+      alignment: DialogAlignment.Center,
       customStyle: true
     })
     this.dialogController?.open()
