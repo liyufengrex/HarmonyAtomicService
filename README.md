@@ -49,7 +49,7 @@ request.excute().then((data)=>{
 + [面相对象的 EventBus 封装](https://juejin.cn/post/7352075796712964122)
 + [扩展修饰器，实现节流、防抖、权限申请](https://juejin.cn/post/7373194499530244136)
 ```ts
-// 示例如下，2秒内多次点击只会触发第一次
+// 修饰器实现节流，示例如下，2秒内多次点击只会触发第一次
 
 @Throttle(2000)
 onClickTap(name: string) {
@@ -58,7 +58,7 @@ onClickTap(name: string) {
 }
 ```
 ```ts
-// 在 UI 布局中通过使用修饰器使用
+// 修饰器实现权限申请，示例如下
 
 @Permission(
     getContext(this) as common.UIAbilityContext,
