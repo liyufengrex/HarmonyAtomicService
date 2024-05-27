@@ -28,6 +28,14 @@ export const COMMON_EXAMPLES: SubCategory[] =
       title: $r('app.string.router_callback_example'),
       url: PagePathConstants.PAGE_ROUTER_CALLBACK,
     },
+    {
+      title: $r('app.string.throttle_example'),
+      url: PagePathConstants.PAGE_THROTTLE_TEST,
+    },
+    {
+      title: $r('app.string.permission_example'),
+      url: PagePathConstants.PAGE_PERMISSION_TEST,
+    },
   ];
 
 export const HOME_CATEGORIES: Category[] =

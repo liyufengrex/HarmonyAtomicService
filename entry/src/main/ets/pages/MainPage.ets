@@ -4,8 +4,10 @@ import {
   EventBusExample,
   HomePage,
   HttpRequestExample,
+  PermissionExample,
   RouterCallbackExample,
-  TestNavPathPage
+  TestNavPathPage,
+  ThrottleExample
 } from '@ohos/feature_home/Index'
 import { PagePathConstants } from '@ohos/global_constant/Index'
 
@@ -73,6 +75,10 @@ struct MainPage {
       TestNavPathPage({
         routerParams: params
       })
+    } else if (name === PagePathConstants.PAGE_THROTTLE_TEST) {
+      ThrottleExample()
+    } else if (name === PagePathConstants.PAGE_PERMISSION_TEST) {
+      PermissionExample()
     } else {
       NavDestination() {
         Text('other')

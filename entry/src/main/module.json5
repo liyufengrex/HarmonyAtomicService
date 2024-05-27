@@ -11,6 +11,31 @@
     "deliveryWithInstall": true,
     "installationFree": true,
     "pages": "$profile:main_pages",
+    "requestPermissions": [
+      {
+        "name": "ohos.permission.INTERNET"
+      },
+      {
+        "name": "ohos.permission.LOCATION",
+        "reason": "$string:app_location_reason",
+        "usedScene": {
+          "abilities" :  [
+            "EntryAbility"
+          ],
+          "when": "inuse"
+        }
+      },
+      {
+        "name": "ohos.permission.APPROXIMATELY_LOCATION",
+        "reason":"$string:app_location_reason",
+        "usedScene": {
+          "abilities": [
+            "EntryAbility"
+          ],
+          "when": "inuse"
+        }
+      }
+    ],
     "abilities": [
       {
         "name": "EntryAbility",
@@ -31,11 +56,6 @@
             ]
           }
         ]
-      }
-    ],
-    "requestPermissions": [
-      {
-        "name": "ohos.permission.INTERNET"
       }
     ]
   }

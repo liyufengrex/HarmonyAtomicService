@@ -10,4 +10,8 @@ export default abstract class PagePathConstants {
   static PAGE_ROUTER_CALLBACK: string = '/page/RouterCallbackExample'
   // Nav路由示例页面
   static PAGE_NAV_ROUTER_TEST: string = '/page/NavRouterTestPage'
+  // 节流防抖示例
+  static PAGE_THROTTLE_TEST: string = '/page/ThrottleExample'
+  // 简易授权示例
+  static PAGE_PERMISSION_TEST: string = '/page/PermissionExample'
 }

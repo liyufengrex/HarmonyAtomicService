@@ -23,6 +23,14 @@
     {
       "name": "router_callback_example",
       "value": "两种路由跳转回调示例"
+    },
+    {
+      "name": "throttle_example",
+      "value": "节流防抖示例"
+    },
+    {
+      "name": "permission_example",
+      "value": "简易授权示例"
     }
   ]
 }
