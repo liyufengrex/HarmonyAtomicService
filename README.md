@@ -30,5 +30,46 @@
 | **feature_hsp_page**    | 存放动态包交互示例            | 动态包（hsp/share） |
 
 
+#### 让开发更简单，部分技巧总结
 
-# 持续更新中......
++ [网络库使用](https://juejin.cn/post/7347851786164437002)
+```ts
+class GetRequest extends HttpRequest<CommonResponseModel<ResponseModel>> {
+  ...省略入参
+}
+
+// 发送请求
+let request = new GetRequest()
+request.excute().then((data)=>{
+  // 这里获取的 data 类型为 CommonResponseModel<BusinessModel>
+})
+```
++ [路由如何选择和使用](https://juejin.cn/post/7369120920148213795)
++ [自定义弹窗解耦](https://juejin.cn/post/7352100456334721034)
++ [面相对象的 EventBus 封装](https://juejin.cn/post/7352075796712964122)
++ [扩展修饰器，实现节流、防抖、权限申请](https://juejin.cn/post/7373194499530244136)
+```ts
+// 示例如下，2秒内多次点击只会触发第一次
+
+@Throttle(2000)
+onClickTap(name: string) {
+  // consolve.log(name)
+  this.count++
+}
+```
+```ts
+// 在 UI 布局中通过使用修饰器使用
+
+@Permission(
+    getContext(this) as common.UIAbilityContext,
+    ['ohos.permission.LOCATION', 'ohos.permission.APPROXIMATELY_LOCATION']
+)
+onClickTap(name: string) {
+  // 授权成功后，才会进入方法内执行 count++
+  this.count++
+}
+```
+  
+
+
+#### 持续更新中......
