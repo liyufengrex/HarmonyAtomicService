@@ -14,4 +14,6 @@ export default abstract class PagePathConstants {
   static PAGE_THROTTLE_TEST: string = '/page/ThrottleExample'
   // 简易授权示例
   static PAGE_PERMISSION_TEST: string = '/page/PermissionExample'
+  // 测试动态路由
+  static DYNAMIC_ROUTER_TEST: string = '@ohos/feature_setting*./src/main/ets/TestDynamicNavPage'
 }

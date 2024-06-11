@@ -1,4 +1,4 @@
-import { RouterModel } from '@ohos/fast_util/Index'
+import { FastNavRouter, RouterModel } from '@ohos/fast_util/Index'
 import {
   CustomDialogExample,
   EventBusExample,
@@ -57,33 +57,38 @@ function tabLabelStyle() {
 @Entry
 @Component
 struct MainPage {
-  @Provide('navPathStack') navPathStack: NavPathStack = new NavPathStack();
+  @Provide('navPathStack') navPathStack: NavPathStack = FastNavRouter.navPathStack;
   @State currentTab: HomeTabItem = homeTabs[0];
 
   // 路由跳转控制
   @Builder
   PageMap(name: string, params?: RouterModel) {
-    if (name === PagePathConstants.PAGE_HTTP_REQUEST) {
-      HttpRequestExample()
-    } else if (name === PagePathConstants.PAGE_EVENT_BUS) {
-      EventBusExample()
-    } else if (name === PagePathConstants.PAGE_CUSTOM_DIALOG) {
-      CustomDialogExample()
-    } else if (name === PagePathConstants.PAGE_ROUTER_CALLBACK) {
-      RouterCallbackExample()
-    } else if (name === PagePathConstants.PAGE_NAV_ROUTER_TEST) {
-      TestNavPathPage({
-        routerParams: params
-      })
-    } else if (name === PagePathConstants.PAGE_THROTTLE_TEST) {
-      ThrottleExample()
-    } else if (name === PagePathConstants.PAGE_PERMISSION_TEST) {
-      PermissionExample()
+    if (FastNavRouter.getBuilder(name) !== undefined) {
+      // 测试动态路由 (TestDynamicNavPage)
+      FastNavRouter.getBuilder(name).builder(params)
     } else {
-      NavDestination() {
-        Text('other')
+      if (name === PagePathConstants.PAGE_HTTP_REQUEST) {
+        HttpRequestExample()
+      } else if (name === PagePathConstants.PAGE_EVENT_BUS) {
+        EventBusExample()
+      } else if (name === PagePathConstants.PAGE_CUSTOM_DIALOG) {
+        CustomDialogExample()
+      } else if (name === PagePathConstants.PAGE_ROUTER_CALLBACK) {
+        RouterCallbackExample()
+      } else if (name === PagePathConstants.PAGE_NAV_ROUTER_TEST) {
+        TestNavPathPage({
+          routerParams: params
+        })
+      } else if (name === PagePathConstants.PAGE_THROTTLE_TEST) {
+        ThrottleExample()
+      } else if (name === PagePathConstants.PAGE_PERMISSION_TEST) {
+        PermissionExample()
+      } else {
+        NavDestination() {
+          Text('other')
+        }
+        .title('other')
       }
-      .title('other')
     }
   }
 

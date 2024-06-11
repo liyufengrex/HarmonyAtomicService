@@ -11,6 +11,7 @@
 + 自定义组件、自定义弹窗（解耦）
 + EventBus 事件通知
 + 扩展修饰器，实现 节流、防抖、权限申请
++ 动态路由 （navPathStack + 动态import + WrappedBuilder）
 
 
 项目结构描述
@@ -67,6 +68,45 @@ onClickTap(name: string) {
 onClickTap(name: string) {
   // 授权成功后，才会进入方法内执行 count++
   this.count++
+}
+```
++ [动态路由]()
+```ts
+// 示例请看 FastNavRouter，下面为关键代码
+
+// 路由管理
+static builderMap: Map<string, WrappedBuilder<[object]>> = new Map<string, WrappedBuilder<[object]>>();
+
+// 注册页面组件到路由表，builderName是路由名字，builder参数是包裹了页面组件的WrappedBuilder对象
+public static registerBuilder(
+    builderName: string,
+    builder: WrappedBuilder<[object]>
+): void {
+    builderMap.set(builderName, builder);
+}
+
+// 动态路由对应的页面
+@Builder
+export function TestDynamicNavPageBuilder(params: object) {}
+
+// 在页面首次加载时触发执行
+const builderName: string = '@ohos/feature_setting*./src/main/ets/TestDynamicNavPage';
+
+// 判断表中是否已存在路由信息，避免重复注册
+if (!FastNavRouter.getBuilder(builderName)) {
+  // 通过系统提供的wrapBuilder接口封装@Builder装饰的方法
+  let builder: WrappedBuilder<[object]> = wrapBuilder(TestDynamicNavPageBuilder);
+  // 注册页面到全局路由表
+  FastNavRouter.registerBuilder(builderName, builder);
+}
+
+// 跟页面路由管理中转
+@Builder
+PageMap(name: string, params?: RouterModel) {
+    if (FastNavRouter.getBuilder(name) !== undefined) {
+      // 测试动态路由 (TestDynamicNavPage)
+      FastNavRouter.getBuilder(name).builder(params)
+    }
 }
 ```
   

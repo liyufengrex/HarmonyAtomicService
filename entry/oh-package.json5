@@ -11,6 +11,6 @@
     "@ohos/global_constant": "file:../base/global_constant",
     "@ohos/feature_home": "file:../business/feature_home",
     "@ohos/feature_setting": "file:../business/feature_setting"
-  }
+  },
 }
 

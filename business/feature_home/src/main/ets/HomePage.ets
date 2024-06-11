@@ -1,4 +1,6 @@
 /// 首页
+import { FastNavRouter } from '@ohos/fast_util';
+import { PagePathConstants } from '@ohos/global_constant';
 import { Category, SubCategory, HOME_CATEGORIES } from './config/HomeCategoricalData';
 
 
@@ -7,7 +9,12 @@ function ColumnStyle() {
   .width('100%')
   .borderRadius(24)
   .backgroundColor(Color.White)
-  .padding({ left: 12, right: 12, bottom: 4, top: 4 })
+  .padding({
+    left: 12,
+    right: 12,
+    bottom: 4,
+    top: 4
+  })
 }
 
 @Extend(Text)
@@ -83,7 +90,13 @@ struct SubCategoryItem {
     .height(48)
     .width('100%')
     .onClick(() => {
-      this.navPathStack.pushPathByName(this.subItem?.url ?? '', null)
+      if (this.subItem?.url === PagePathConstants.DYNAMIC_ROUTER_TEST) {
+        // 测试动态路由
+        let param = new String('我是测试数据')
+        FastNavRouter.push({ builderName: this.subItem.url, param: param })
+      } else {
+        this.navPathStack.pushPathByName(this.subItem?.url ?? '', null)
+      }
     })
   }
 }

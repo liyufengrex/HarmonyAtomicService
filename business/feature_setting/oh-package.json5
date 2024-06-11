@@ -5,5 +5,8 @@
   "main": "Index.ets",
   "author": "",
   "license": "Apache-2.0",
-  "dependencies": {}
+  "dependencies": {
+    "@ohos/fast_util": "file:../../base/fast_util",
+    "@ohos/global_constant": "file:../../base/global_constant"
+  }
 }

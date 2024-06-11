@@ -1,6 +1,13 @@
 {
   "apiType": "stageMode",
   "buildOption": {
+    "arkOptions": {
+      "runtimeOnly": {
+        "packages": [
+          "@ohos/feature_setting" // 测试动态路由，仅用于使用变量动态import其他模块名场景，静态import或常量动态import无需配置。
+        ]
+      }
+    }
   },
   "buildOptionSet": [
     {

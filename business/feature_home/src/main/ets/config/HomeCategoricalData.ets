@@ -36,6 +36,14 @@ export const COMMON_EXAMPLES: SubCategory[] =
       title: $r('app.string.permission_example'),
       url: PagePathConstants.PAGE_PERMISSION_TEST,
     },
+    {
+      title: $r('app.string.permission_example'),
+      url: PagePathConstants.PAGE_PERMISSION_TEST,
+    },
+    {
+      title: $r('app.string.dynamic_router_example'),
+      url: PagePathConstants.DYNAMIC_ROUTER_TEST,
+    },
   ];
 
 export const HOME_CATEGORIES: Category[] =
