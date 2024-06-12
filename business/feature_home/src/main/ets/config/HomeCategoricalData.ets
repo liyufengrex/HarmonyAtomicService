@@ -44,6 +44,10 @@ export const COMMON_EXAMPLES: SubCategory[] =
       title: $r('app.string.dynamic_router_example'),
       url: PagePathConstants.DYNAMIC_ROUTER_TEST,
     },
+    {
+      title: $r('app.string.dynamic_ui_node_example'),
+      url: PagePathConstants.DYNAMIC_UI_NODE_TEST,
+    },
   ];
 
 export const HOME_CATEGORIES: Category[] =

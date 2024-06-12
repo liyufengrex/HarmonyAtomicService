@@ -31,10 +31,14 @@
     {
       "name": "permission_example",
       "value": "简易授权示例"
-    }
-    ,{
+    },
+    {
       "name": "dynamic_router_example",
       "value": "测试动态路由"
+    },
+    {
+      "name": "dynamic_ui_node_example",
+      "value": "UI动态节点示例"
     }
   ]
 }

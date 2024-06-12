@@ -12,6 +12,7 @@
 + EventBus 事件通知
 + 扩展修饰器，实现 节流、防抖、权限申请
 + 动态路由 （navPathStack + 动态import + WrappedBuilder）
++ UI动态节点操作 (BuilderNode + NodeController)
 
 
 项目结构描述

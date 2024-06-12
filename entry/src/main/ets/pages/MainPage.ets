@@ -1,5 +1,6 @@
 import { FastNavRouter, RouterModel } from '@ohos/fast_util/Index'
 import {
+  BuilderNodeExample,
   CustomDialogExample,
   EventBusExample,
   HomePage,
@@ -83,6 +84,8 @@ struct MainPage {
         ThrottleExample()
       } else if (name === PagePathConstants.PAGE_PERMISSION_TEST) {
         PermissionExample()
+      } else if (name === PagePathConstants.DYNAMIC_UI_NODE_TEST) {
+        BuilderNodeExample()
       } else {
         NavDestination() {
           Text('other')
