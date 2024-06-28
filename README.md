@@ -7,7 +7,7 @@
 + 静态库+动态包+多模块设计
 + 状态管理
 + 统一路由管理（router+navPathStack）
-+ 网络请求、Loading 等工具库封装
++ 网络请求、Loading、Toast、数据持久化 等工具库封装
 + 自定义组件、自定义弹窗（解耦）
 + EventBus 事件通知
 + 扩展修饰器，实现 节流、防抖、权限申请
@@ -19,11 +19,11 @@
 
 #### 基础库
 
-| 模块名称                | 描述                  | 备注                                                                                                           |
-|---------------------|---------------------|--------------------------------------------------------------------------------------------------------------|
-| **fast_util**       | 工具类                 | FastLog（日志打印）<br/>EventBus（消息通知）<br/>FastRouter（路由管理）<br/>ThrottleTool(节流、防抖) <br/>FastPermission(修饰器实现权限申请) |
-| **fast_ui**         | 提供 UI 封装、样式、toast 等 | CommonText（统一文本）<br/>CommonButton（统一按键）<br/> FastToast <br/> FastLoading                                     |
-| **global_constant** | 记录全局常量配置            | PagePathConstants(路由路径管理)                                                                                    |
+| 模块名称                | 描述                  | 备注                                                                                                                                         |
+|---------------------|---------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
+| **fast_util**       | 工具类                 | FastLog（日志打印）<br/>EventBus（消息通知）<br/>FastRouter（路由管理）<br/>ThrottleTool(节流、防抖) <br/>FastPermission(修饰器实现权限申请) <br/>PreferencesUtil(数据持久化封装) |
+| **fast_ui**         | 提供 UI 封装、样式、toast 等 | CommonText（统一文本）<br/>CommonButton（统一按键）<br/> FastToast <br/> FastLoading                                                                   |
+| **global_constant** | 记录全局常量配置            | PagePathConstants(路由路径管理)                                                                                                                  |
 
 #### 业务库
 | 模块名称                | 描述                  | 备注 |
@@ -72,6 +72,7 @@
 │  │      ├──FastPermission.ets                   // 请求权限注解器
 │  │      ├──FastRouter.ets                       // 基于 router 库封装，为了实现页面回调
 │  │      ├──FastTool.ets                
+│  │      ├──PreferencesUtil.ets                  // 数据持久化工具
 │  │      └──ThrottleTool.ets                     //防抖注解器
 │  ├──global_constant  
 │  │
