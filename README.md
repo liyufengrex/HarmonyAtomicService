@@ -31,6 +31,54 @@
 | **feature_home**    | 主要存放代码示例            | 静态包（har） |
 | **feature_hsp_page**    | 存放动态包交互示例            | 动态包（hsp/share） |
 
+#### 工程目录
+```ts
+├──entry                                        // ets代码区
+│  └──src/main/ets 
+│       ├──entryability  
+│       │  └──EntryAbility.ets         
+│       ├──pages  
+│       │  └──MainPage.ets                       // 首页
+├──business                                      // 放置静态包的文件夹（业务模块）
+│  ├──feature_home                               // 放置首页Tab里的一些示例页面                 
+│  │   └──/src/main/ets/pages      
+│  │      ├──HomePage.ets                         //首页的第一个Tab                     
+│  │      ├──BuilderNodeExample.ets               //动态节点操作示例          
+│  │      ├──CustomDialogExample.ets              //自定义弹窗解耦
+│  │      ├──EventBusExample.ets                  //消息通知
+│  │      ├──HttpRequestExample.ets               //网络请求示例
+│  │      ├──PermissionExample.ets                //使用注解请求权限
+│  │      ├──RouterCallbackExample.ets            //两种方式router回调示例
+│  │      └──ThrottleExample.ets                  //使用注解防抖
+│  ├──feature_setting   
+│  │   └──/src/main/ets/pages  
+│  │      ├──SettingPages.ets                     //首页的第二个Tab
+│  │      └──TestDynamicNavPage.ets               //测试动态路由示例
+├──features                                       //放置动态包的文件夹
+│  ├──feature_has_page  
+│  │   └──/src/main/ets/pages  
+│  │      └──TestHspHomePage.ets                  //测试动态包router回调示例
+├──base  
+│  ├──fast_ui                                     //封装公共UI
+│  │   ├──/src/main/ets/compnents  
+│  │   │   ├──FastLoading.ets                     // loading工具
+│  │   │   └──FastToast.ets                       // toast工具
+│  │   └──/src/main/ets/styles                    // 公共样式
+│  ├──fast_util                                   // 通用工具
+│  │   ├──/src/main/ets 
+│  │      ├──EventBus.ets                         // 消息通知+监听                     
+│  │      ├──FastLog.ets                          // 日志打印
+│  │      ├──FastNavRouter.ets                    // 用于动态路由
+│  │      ├──FastPermission.ets                   // 请求权限注解器
+│  │      ├──FastRouter.ets                       // 基于 router 库封装，为了实现页面回调
+│  │      ├──FastTool.ets                
+│  │      └──ThrottleTool.ets                     //防抖注解器
+│  ├──global_constant  
+│  │
+├──entry/src/main/resources                   // 应用资源目录 
+└──module.json5                               // 添加卡片拓展能力                         
+```
+
 
 #### 让开发更简单，部分技巧总结
 
