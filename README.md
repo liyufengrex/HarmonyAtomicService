@@ -13,6 +13,7 @@
 + 扩展修饰器，实现 节流、防抖、权限申请
 + 动态路由 （navPathStack + 动态import + WrappedBuilder）
 + UI动态节点操作 (BuilderNode + NodeController)
++ 折叠屏适配示例
 
 
 项目结构描述
@@ -36,6 +37,7 @@
 ├──entry                                        // ets代码区
 │  └──src/main/ets 
 │       ├──entryability  
+│       │  ├──FoldStatusObserver.ets             // 折叠屏幕变化监听
 │       │  └──EntryAbility.ets         
 │       ├──pages  
 │       │  └──MainPage.ets                       // 首页
@@ -49,6 +51,7 @@
 │  │      ├──HttpRequestExample.ets               //网络请求示例
 │  │      ├──PermissionExample.ets                //使用注解请求权限
 │  │      ├──RouterCallbackExample.ets            //两种方式router回调示例
+│  │      ├──FixFoldUiExample.ets                 //折叠屏适配示例
 │  │      └──ThrottleExample.ets                  //使用注解防抖
 │  ├──feature_setting   
 │  │   └──/src/main/ets/pages  
@@ -61,6 +64,7 @@
 ├──base  
 │  ├──fast_ui                                     //封装公共UI
 │  │   ├──/src/main/ets/compnents  
+│  │   │   ├──FoldStatusContainer.ets             // 折叠屏变化响应组件封装
 │  │   │   ├──FastLoading.ets                     // loading工具
 │  │   │   └──FastToast.ets                       // toast工具
 │  │   └──/src/main/ets/styles                    // 公共样式
