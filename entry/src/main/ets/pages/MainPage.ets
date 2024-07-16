@@ -3,6 +3,7 @@ import {
   BuilderNodeExample,
   CustomDialogExample,
   EventBusExample,
+  FixFoldUiExample,
   HomePage,
   HttpRequestExample,
   PermissionExample,
@@ -11,6 +12,7 @@ import {
   ThrottleExample
 } from '@ohos/feature_home/Index'
 import { PagePathConstants } from '@ohos/global_constant/Index'
+import { FoldStatusObserver } from '../entryability/FoldStatusObserver'
 
 enum TabItemEnum {
   home = '首页',
@@ -61,6 +63,16 @@ struct MainPage {
   @Provide('navPathStack') navPathStack: NavPathStack = FastNavRouter.navPathStack;
   @State currentTab: HomeTabItem = homeTabs[0];
 
+  public readonly foldStatusKey = 'foldStatusKey'
+
+  aboutToAppear(): void {
+    FoldStatusObserver.onCreate()
+  }
+
+  aboutToDisappear(): void {
+    FoldStatusObserver.onDestroy()
+  }
+
   // 路由跳转控制
   @Builder
   PageMap(name: string, params?: RouterModel) {
@@ -86,6 +98,8 @@ struct MainPage {
         PermissionExample()
       } else if (name === PagePathConstants.DYNAMIC_UI_NODE_TEST) {
         BuilderNodeExample()
+      } else if (name === PagePathConstants.FIX_FOLD_UI_EXAMPLE) {
+        FixFoldUiExample()
       } else {
         NavDestination() {
           Text('other')
@@ -130,10 +144,15 @@ struct MainPage {
       .scrollable(false)
       .animationDuration(0)
       .barHeight('48vp')
+      .expandSafeArea([SafeAreaType.SYSTEM], [SafeAreaEdge.TOP])
       .onChange((index) => {
         this.currentTab = homeTabs[index]
       })
     }
+    .mode(NavigationMode.Stack) //不加这个在折叠屏会有问题
+    .navBarWidth('100%')
+    .height('100%')
+    .width('100%')
     .backgroundColor($r('app.color.primary'))
     .navDestination(this.PageMap)
     .appStyle()

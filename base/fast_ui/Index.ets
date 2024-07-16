@@ -5,3 +5,5 @@ export { CommonFillButton, CommonLineButton } from './src/main/ets/styles/Common
 export { FastLoading, FastLoadingDialog } from './src/main/ets/components/FastLoading'
 
 export { FastToast } from './src/main/ets/components/FastToast'
+
+export { FoldStatusContainer } from './src/main/ets/components/FoldStatusContainer'

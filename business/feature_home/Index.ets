@@ -6,3 +6,4 @@ export { RouterCallbackExample, TestNavPathPage } from './src/main/ets/pages/Rou
 export { ThrottleExample } from './src/main/ets/pages/ThrottleExample'
 export { PermissionExample } from './src/main/ets/pages/PermissionExample'
 export { BuilderNodeExample } from './src/main/ets/pages/BuilderNodeExample'
+export { FixFoldUiExample } from './src/main/ets/pages/FixFoldUiExample'

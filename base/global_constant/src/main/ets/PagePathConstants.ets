@@ -18,4 +18,6 @@ export default abstract class PagePathConstants {
   static DYNAMIC_ROUTER_TEST: string = '@ohos/feature_setting*./src/main/ets/TestDynamicNavPage'
   // UI动态节点示例
   static DYNAMIC_UI_NODE_TEST: string = '/page/BuilderNodeExample'
+  // 适配折叠屏
+  static FIX_FOLD_UI_EXAMPLE: string = '/page/FixFoldUiExample'
 }

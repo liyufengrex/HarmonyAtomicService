@@ -39,6 +39,10 @@
     {
       "name": "dynamic_ui_node_example",
       "value": "UI动态节点示例"
+    },
+    {
+      "name": "fix_fold_ui_example",
+      "value": "折叠屏适配"
     }
   ]
 }
