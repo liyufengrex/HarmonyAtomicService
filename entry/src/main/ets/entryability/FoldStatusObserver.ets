@@ -5,14 +5,14 @@ abstract class FoldStatusObserver {
   public static readonly foldStatusKey = 'foldStatusKey'
   private static listener?: mediaquery.MediaQueryListener
 
-  /// 在 EntryAbility onWindowStageCreate 生命周期内调用
-  public static onCreate() {
+  /// 在 MainPage aboutToAppear 生命周期内调用
+  public static startListening() {
     FoldStatusObserver.listener = mediaquery.matchMediaSync('screen and (min-width: 400vp)')
     FoldStatusObserver.listener.on('change', FoldStatusObserver.onFoldStatusChange)
   }
 
-  /// 在 EntryAbility onWindowStageDestroy 生命周期内调用
-  public static onDestroy() {
+  /// 在 MainPage aboutToDisappear 生命周期内调用
+  public static stopListening() {
     FoldStatusObserver.listener?.off('change', FoldStatusObserver.onFoldStatusChange)
   }
 

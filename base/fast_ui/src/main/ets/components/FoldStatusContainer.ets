@@ -1,3 +1,5 @@
+/// 响应折叠屏变化的父容器
+
 @Component
 export struct FoldStatusContainer {
   @StorageProp('foldStatusKey') isFold: boolean = false

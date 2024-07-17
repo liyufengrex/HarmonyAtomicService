@@ -66,11 +66,11 @@ struct MainPage {
   public readonly foldStatusKey = 'foldStatusKey'
 
   aboutToAppear(): void {
-    FoldStatusObserver.onCreate()
+    FoldStatusObserver.startListening()
   }
 
   aboutToDisappear(): void {
-    FoldStatusObserver.onDestroy()
+    FoldStatusObserver.stopListening()
   }
 
   // 路由跳转控制
