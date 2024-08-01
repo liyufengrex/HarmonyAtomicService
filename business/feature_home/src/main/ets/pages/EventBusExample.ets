@@ -35,7 +35,8 @@ struct PageA {
   }
 
   build() {
-    Column() {
+    Column({space: '15vp'}) {
+      Text('PageA')
       Text(this.receivedData)
     }
     .justifyContent(FlexAlign.Center)
@@ -46,7 +47,8 @@ struct PageA {
 @Component
 struct PageB {
   build() {
-    Column() {
+    Column({space: '15vp'}) {
+      Text('PageB')
       CommonFillButton({
         text: '发送消息给注册方',
         event: () => {
