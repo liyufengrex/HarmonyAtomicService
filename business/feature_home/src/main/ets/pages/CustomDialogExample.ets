@@ -26,9 +26,12 @@ export struct CustomDialogExample {
   build() {
     NavDestination() {
       Column() {
-        Text(this.callbackMessage).fontSize('18vp').margin({
-          bottom: '20vp',
-        })
+        Text(this.callbackMessage)
+          .textAlign(TextAlign.Center)
+          .fontSize('18vp')
+          .margin({
+            bottom: '20vp',
+          })
         this.DialogControllerBuilder()
         CommonFillButton({
           text: '弹窗',

@@ -2,8 +2,10 @@
 import { CommonFillButton } from '@ohos/fast_ui/Index'
 
 @CustomDialog
+@Component
 export struct MyCustomDialog {
   private controller: CustomDialogController
+  @State randomResult: number = 0
   //确定按钮回调
   confirmed: (message: string) => void = (_) => {
   }
@@ -15,32 +17,34 @@ export struct MyCustomDialog {
     this.disappearCallback()
   }
 
+  aboutToAppear(): void {
+    this.randomResult = Math.random()
+  }
+
   build() {
     Column() {
-      Text('这是一个自定义弹窗').margin({
-        top: '30vp',
-        bottom: '20vp',
-      })
+      Text(`这是一个自定义弹窗\n\n${this.randomResult}`)
+        .margin({
+          bottom: '20vp',
+        })
       CommonFillButton({
-        text: '点击传递数据给调用方',
+        text: `点击传递数据给调用方`,
         horizontalPadding: '90vp',
         verticalPadding: '12vp',
         event: (): void => {
           this.controller.close()
-          this.confirmed('你好，我是弹窗点击返回的内容')
+          this.confirmed(`你好，我是弹窗点击返回的内容: ${this.randomResult}`)
         }
       })
     }
     .width("100%")
     .padding({
-      bottom: '15vp',
+      top: '30vp',
+      bottom: '30vp',
       left: '10vp',
       right: '10vp',
     })
-    .borderRadius({
-      topLeft: '24vp',
-      topRight: '24vp',
-    })
+    .borderRadius('12vp')
     .backgroundColor(Color.White)
   }
 }
