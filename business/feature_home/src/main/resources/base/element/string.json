@@ -47,6 +47,10 @@
     {
       "name": "component_factory_example",
       "value": "组件工厂示例"
+    },
+    {
+      "name": "attribute_modifier_example",
+      "value": "组件动态属性设置示例"
     }
   ]
 }

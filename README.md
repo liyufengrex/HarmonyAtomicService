@@ -15,6 +15,7 @@
 + UI动态节点操作 (BuilderNode + NodeController)
 + 折叠屏适配示例
 + 组件工厂示例
++ 组件动态属性设置示例
 
 项目结构描述
 
@@ -53,6 +54,7 @@
 │  │      ├──RouterCallbackExample.ets            //两种方式router回调示例
 │  │      ├──FixFoldUiExample.ets                 //折叠屏适配示例
 │  │      ├──ComponentFactoryExample.ets          //组件工厂示例
+│  │      ├──AttributeModifierExample.ets         //组件动态属性设置示例
 │  │      └──ThrottleExample.ets                  //使用注解防抖
 │  ├──feature_setting   
 │  │   └──/src/main/ets/pages  

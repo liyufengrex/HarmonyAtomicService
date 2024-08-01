@@ -52,6 +52,10 @@ export const COMMON_EXAMPLES: SubCategory[] =
       title: $r('app.string.component_factory_example'),
       url: PagePathConstants.COMPONENT_FACTORY_EXAMPLE,
     },
+    {
+      title: $r('app.string.attribute_modifier_example'),
+      url: PagePathConstants.ATTRIBUTE_MODIFIER_EXAMPLE,
+    },
   ];
 
 export const HOME_CATEGORIES: Category[] =

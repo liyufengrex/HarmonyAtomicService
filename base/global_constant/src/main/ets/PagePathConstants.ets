@@ -22,4 +22,6 @@ export default abstract class PagePathConstants {
   static FIX_FOLD_UI_EXAMPLE: string = '/page/FixFoldUiExample'
   // 组件工厂示例
   static COMPONENT_FACTORY_EXAMPLE: string = '/page/ComponentFactoryExample'
+  // 组件动态属性示例
+  static ATTRIBUTE_MODIFIER_EXAMPLE: string = '/page/AttributeModifierExample'
 }
