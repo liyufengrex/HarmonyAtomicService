@@ -16,7 +16,6 @@
 + 折叠屏适配示例
 + 组件工厂示例
 
-
 项目结构描述
 
 #### 基础库
@@ -187,7 +186,7 @@ factoryMap.set('UI2', wrapBuilder(UI2))
 // 使用
 (factoryMap.get('UI1') as WrappedBuilder<[string]>).builder('工厂组件 - 1');
 ```
-  
 
 
+![](screenshots/sh_1.png)
 #### 持续更新中......
