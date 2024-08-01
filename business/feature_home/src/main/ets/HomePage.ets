@@ -93,7 +93,7 @@ struct SubCategoryItem {
     .onClick(() => {
       if (this.subItem?.url === PagePathConstants.DYNAMIC_ROUTER_TEST) {
         // 测试动态路由
-        let param = new String('我是测试数据')
+        let param = new String(this.subItem.url)
         FastNavRouter.push({ builderName: this.subItem.url, param: param })
       } else {
         this.navPathStack.pushPathByName(this.subItem?.url ?? '', null)

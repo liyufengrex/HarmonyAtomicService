@@ -8,15 +8,15 @@ export struct TestDynamicNavPage {
 
   build() {
     NavDestination() {
-      Column({ space: '15vp' }) {
-        Text('测试动态路由').fontSize('20vp')
-        Text(`接收入参：${this.params}`).fontSize('20vp')
+      Column({ space: '30vp' }) {
+        Text('页面路径：TestDynamicNavPage').fontSize('18vp').fontWeight(FontWeight.Bold)
+        Text(`${this.params}`).fontSize('12vp')
       }
       .justifyContent(FlexAlign.Center)
       .width('100%')
       .height('100%')
     }
-    .title('测试动态路由')
+    .title('动态路由目标页')
   }
 }
 
