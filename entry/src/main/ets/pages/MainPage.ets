@@ -9,7 +9,7 @@ import {
   HttpRequestExample,
   PermissionExample,
   RouterCallbackExample,
-  TestNavPathPage,
+  TestNavPathJumpPage,
   ThrottleExample
 } from '@ohos/feature_home/Index'
 import { PagePathConstants } from '@ohos/global_constant/Index'
@@ -90,7 +90,7 @@ struct MainPage {
       } else if (name === PagePathConstants.PAGE_ROUTER_CALLBACK) {
         RouterCallbackExample()
       } else if (name === PagePathConstants.PAGE_NAV_ROUTER_TEST) {
-        TestNavPathPage({
+        TestNavPathJumpPage({
           routerParams: params
         })
       } else if (name === PagePathConstants.PAGE_THROTTLE_TEST) {
