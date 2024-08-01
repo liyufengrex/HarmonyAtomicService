@@ -1,6 +1,7 @@
 import { FastNavRouter, RouterModel } from '@ohos/fast_util/Index'
 import {
   BuilderNodeExample,
+  ComponentFactoryExample,
   CustomDialogExample,
   EventBusExample,
   FixFoldUiExample,
@@ -100,6 +101,8 @@ struct MainPage {
         BuilderNodeExample()
       } else if (name === PagePathConstants.FIX_FOLD_UI_EXAMPLE) {
         FixFoldUiExample()
+      } else if (name === PagePathConstants.COMPONENT_FACTORY_EXAMPLE) {
+        ComponentFactoryExample()
       } else {
         NavDestination() {
           Text('other')

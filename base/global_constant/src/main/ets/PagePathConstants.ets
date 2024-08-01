@@ -20,4 +20,6 @@ export default abstract class PagePathConstants {
   static DYNAMIC_UI_NODE_TEST: string = '/page/BuilderNodeExample'
   // 适配折叠屏
   static FIX_FOLD_UI_EXAMPLE: string = '/page/FixFoldUiExample'
+  // 组件工厂示例
+  static COMPONENT_FACTORY_EXAMPLE: string = '/page/ComponentFactoryExample'
 }

@@ -14,6 +14,7 @@
 + 动态路由 （navPathStack + 动态import + WrappedBuilder）
 + UI动态节点操作 (BuilderNode + NodeController)
 + 折叠屏适配示例
++ 组件工厂示例
 
 
 项目结构描述
@@ -52,6 +53,7 @@
 │  │      ├──PermissionExample.ets                //使用注解请求权限
 │  │      ├──RouterCallbackExample.ets            //两种方式router回调示例
 │  │      ├──FixFoldUiExample.ets                 //折叠屏适配示例
+│  │      ├──ComponentFactoryExample.ets          //组件工厂示例
 │  │      └──ThrottleExample.ets                  //使用注解防抖
 │  ├──feature_setting   
 │  │   └──/src/main/ets/pages  
@@ -77,7 +79,7 @@
 │  │      ├──FastRouter.ets                       // 基于 router 库封装，为了实现页面回调
 │  │      ├──FastTool.ets                
 │  │      ├──PreferencesUtil.ets                  // 数据持久化工具
-│  │      └──ThrottleTool.ets                     //防抖注解器
+│  │      └──ThrottleTool.ets                     // 防抖注解器
 │  ├──global_constant  
 │  │
 ├──entry/src/main/resources                   // 应用资源目录 
@@ -162,6 +164,28 @@ PageMap(name: string, params?: RouterModel) {
       FastNavRouter.getBuilder(name).builder(params)
     }
 }
+```
++ [适配折叠屏](https://juejin.cn/post/7392252402496389172)
++ 组件工厂
+```ts
+// 声明
+@Builder
+function UI1(text: string) {
+  Text(text).fontColor(Color.Green)
+}
+
+@Builder
+function UI2(text: string) {
+  Text(text).fontColor(Color.Blue)
+}
+
+let factoryMap: Map<string, object> = new Map();
+
+factoryMap.set('UI1', wrapBuilder(UI1))
+factoryMap.set('UI2', wrapBuilder(UI2))
+
+// 使用
+(factoryMap.get('UI1') as WrappedBuilder<[string]>).builder('工厂组件 - 1');
 ```
   
 

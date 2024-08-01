@@ -37,10 +37,6 @@ export const COMMON_EXAMPLES: SubCategory[] =
       url: PagePathConstants.PAGE_PERMISSION_TEST,
     },
     {
-      title: $r('app.string.permission_example'),
-      url: PagePathConstants.PAGE_PERMISSION_TEST,
-    },
-    {
       title: $r('app.string.dynamic_router_example'),
       url: PagePathConstants.DYNAMIC_ROUTER_TEST,
     },
@@ -51,6 +47,10 @@ export const COMMON_EXAMPLES: SubCategory[] =
     {
       title: $r('app.string.fix_fold_ui_example'),
       url: PagePathConstants.FIX_FOLD_UI_EXAMPLE,
+    },
+    {
+      title: $r('app.string.component_factory_example'),
+      url: PagePathConstants.COMPONENT_FACTORY_EXAMPLE,
     },
   ];
 
