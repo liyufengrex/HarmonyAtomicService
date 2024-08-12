@@ -64,7 +64,6 @@ function tabLabelStyle() {
 struct MainPage {
   @Provide('navPathStack') navPathStack: NavPathStack = FastNavRouter.navPathStack;
   @State currentTab: HomeTabItem = homeTabs[0];
-
   public readonly foldStatusKey = 'foldStatusKey'
 
   aboutToAppear(): void {
@@ -106,11 +105,6 @@ struct MainPage {
         ComponentFactoryExample()
       } else if (name === PagePathConstants.ATTRIBUTE_MODIFIER_EXAMPLE) {
         AttributeModifierExample()
-      } else {
-        NavDestination() {
-          Text('other')
-        }
-        .title('other')
       }
     }
   }

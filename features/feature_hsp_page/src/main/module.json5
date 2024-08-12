@@ -9,6 +9,7 @@
     ],
     "deliveryWithInstall": true,
     "installationFree": true,
-    "pages": "$profile:main_pages"
+    "pages": "$profile:main_pages",
+    "routerMap": "$profile:route_map"
   }
 }

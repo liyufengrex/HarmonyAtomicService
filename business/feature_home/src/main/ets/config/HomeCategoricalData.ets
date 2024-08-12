@@ -6,7 +6,7 @@ export interface Category {
 }
 
 export interface SubCategory {
-  title: Resource,
+  title: Resource | string,
   url?: string,
 }
 

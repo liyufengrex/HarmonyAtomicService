@@ -22,7 +22,7 @@
     },
     {
       "name": "router_callback_example",
-      "value": "两种路由跳转回调示例"
+      "value": "页面跳转回调示例（HAR、HSP）"
     },
     {
       "name": "throttle_example",

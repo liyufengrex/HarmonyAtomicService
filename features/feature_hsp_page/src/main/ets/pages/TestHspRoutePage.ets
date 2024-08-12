@@ -1,23 +1,29 @@
-import { CommonFillButton } from '@ohos/fast_ui/src/main/ets/styles/CommonButtonStyle';
-import { RouterModel } from '@ohos/fast_util/src/main/ets/FastRouter';
+import { CommonFillButton } from '@ohos/fast_ui/Index'
+import { FastRouter, RouterModel } from '@ohos/fast_util/Index'
 
-/// 测试 NavPathStack 跳转 Har 页面
+/// 测试 Route 跳转 HSP 内页面
+@Entry
 @Component
-export struct TestNavPathJumpPage {
-  @Consume('navPathStack') navPathStack: NavPathStack;
+struct TestHspRoutePage {
   routerParams?: RouterModel
   @State receiveParams: string = ''
   @State resultData: string = ''
 
   aboutToAppear(): void {
-    this.receiveParams = this.routerParams!.params!.toString()
+    this.routerParams = FastRouter.getRouterCurrentParams as RouterModel
+    this.receiveParams = this.routerParams.params!.toString()
     this.resultData = (Math.random() * 100).toFixed(0).toString()
+  }
+
+  onBackPress(): boolean | void {
+    FastRouter.pop()
+    return true
   }
 
   build() {
     NavDestination() {
       Column({ space: '30vp' }) {
-        Text(`页面模块及路径：feature_home(har) TestNavPathJumpPage.ets`).fontSize('12vp').fontColor(Color.Red)
+        Text(`页面模块及路径：feature_hsp_page(hsp) TestHspRoutePage.ets`).fontSize('12vp').fontColor(Color.Red)
         Text(`接收到的入参：${this.receiveParams}`).fontSize('15vp')
         Text(`页面随机数（用于测试回传）: ${this.resultData}`).fontSize('18vp')
         CommonFillButton({
@@ -26,9 +32,9 @@ export struct TestNavPathJumpPage {
           verticalPadding: '10vp',
           event: () => {
             if (this.routerParams?.popCallback !== undefined) {
-              this.routerParams.popCallback(`NavPathStack 回调结果：${this.resultData}`)
+              this.routerParams.popCallback(`Router 回调结果：${this.resultData}`)
             }
-            this.navPathStack.pop()
+            FastRouter.pop()
           }
         })
       }
@@ -36,6 +42,6 @@ export struct TestNavPathJumpPage {
       .width('100%')
       .justifyContent(FlexAlign.Center)
     }
-    .title('NavPath跳转Har页面')
+    .title('Route跳转HSP页面')
   }
 }

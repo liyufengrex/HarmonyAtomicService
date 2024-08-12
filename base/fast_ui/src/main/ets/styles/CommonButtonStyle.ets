@@ -66,7 +66,35 @@ function CommonLineButton(
     .onClick(option.event)
 }
 
-export { CommonFillButton, CommonLineButton }
+@Builder
+function FillFlexButton(
+  option: CommonButtonOption
+) {
+  Text(option.text)
+    .textAlign(TextAlign.Center)
+    .fontSize(option.fontSize ?? $r('app.float.font_default'))
+    .fontWeight(option.fontWeight ?? FontWeight.Normal)
+    .fontColor(option.fontColor ?? $r('app.color.primary'))
+    .backgroundColor(option.backGroundColor ?? $r('app.color.secondary'))
+    .padding({
+      top: option.verticalPadding ?? '6vp',
+      bottom: option.verticalPadding ?? '6vp',
+    })
+    .margin(
+      {
+        left: option.marginLeft,
+        top: option.marginTop,
+        right: option.marginRight,
+        bottom: option.marginBottom,
+      }
+    )
+    .borderRadius(option.borderRadius ?? '24vp')
+    .width('100%')
+    .layoutWeight(1)
+    .onClick(option.event)
+}
+
+export { CommonFillButton, CommonLineButton, FillFlexButton }
 
 
 /// 使用方式预览

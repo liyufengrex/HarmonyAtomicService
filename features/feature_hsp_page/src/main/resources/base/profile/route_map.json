@@ -1,0 +1,12 @@
+{
+  "routerMap": [
+    {
+      "name": "TestHspNavJumpCallback",
+      "pageSourceFile": "src/main/ets/pages/TestHspNavPathPage.ets",
+      "buildFunction": "TestHspNavPathPageBuilder",
+      "data": {
+        "description" : "this is PageOne"
+      }
+    }
+  ]
+}

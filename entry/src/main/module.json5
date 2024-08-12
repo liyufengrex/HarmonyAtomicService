@@ -36,6 +36,13 @@
         }
       }
     ],
+    "atomicService": {
+      "preloads": [
+        {
+          "moduleName": "feature_hsp_page"
+        },
+      ]
+    },
     "abilities": [
       {
         "name": "EntryAbility",

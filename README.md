@@ -21,11 +21,11 @@
 
 #### 基础库
 
-| 模块名称                | 描述                  | 备注                                                                                                                                         |
-|---------------------|---------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
-| **fast_util**       | 工具类                 | FastLog（日志打印）<br/>EventBus（消息通知）<br/>FastRouter（路由管理）<br/>ThrottleTool(节流、防抖) <br/>FastPermission(修饰器实现权限申请) <br/>PreferencesUtil(数据持久化封装) |
-| **fast_ui**         | 提供 UI 封装、样式、toast 等 | CommonText（统一文本）<br/>CommonButton（统一按键）<br/> FastToast <br/> FastLoading                                                                   |
-| **global_constant** | 记录全局常量配置            | PagePathConstants(路由路径管理)                                                                                                                  |
+| 模块名称                | 描述                  | 备注                                                                                                                                                                               |
+|---------------------|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **fast_util**       | 工具类                 | FastLog（日志打印）<br/>EventBus（消息通知）<br/>FastRouter（基于Route封装的路由管理）<br/> FastNavRouter（动态路由）<br/>ThrottleTool (节流、防抖) <br/>FastPermission (修饰器实现权限申请) <br/>PreferencesUtil (数据持久化封装) |
+| **fast_ui**         | 提供 UI 封装、样式、toast 等 | CommonText（统一文本）<br/>CommonButton（统一按键）<br/> FastToast <br/> FastLoading                                                                                                         |
+| **global_constant** | 记录全局常量配置            | PagePathConstants (路由路径管理)                                                                                                                                                       |
 
 #### 业务库
 | 模块名称                | 描述                  | 备注 |
@@ -51,7 +51,7 @@
 │  │      ├──EventBusExample.ets                  //消息通知
 │  │      ├──HttpRequestExample.ets               //网络请求示例
 │  │      ├──PermissionExample.ets                //使用注解请求权限
-│  │      ├──RouterCallbackExample.ets            //两种方式router回调示例
+│  │      ├──RouterCallbackExample.ets            //使用 NavPathStack 与 Route 两种方式实现页面跳转及回调（HSP、HAR）
 │  │      ├──FixFoldUiExample.ets                 //折叠屏适配示例
 │  │      ├──ComponentFactoryExample.ets          //组件工厂示例
 │  │      ├──AttributeModifierExample.ets         //组件动态属性设置示例
@@ -63,7 +63,8 @@
 ├──features                                       //放置动态包的文件夹
 │  ├──feature_has_page  
 │  │   └──/src/main/ets/pages  
-│  │      └──TestHspHomePage.ets                  //测试动态包router回调示例
+│  │      ├──TestHspNavPathPage.ets               //测试 NavPath 跳转 HSP 内页面
+│  │      └──TestHspRouterPage.ets                //测试 Route 跳转 HSP 内页面
 ├──base  
 │  ├──fast_ui                                     //封装公共UI
 │  │   ├──/src/main/ets/compnents  
