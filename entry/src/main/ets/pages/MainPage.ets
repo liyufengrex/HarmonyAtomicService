@@ -133,7 +133,7 @@ struct MainPage {
             if (this.currentTab.type == TabItemEnum.home) {
               HomePage()
             } else {
-              Text()
+              Text('持续更新中...')
             }
           }
           .tabBar(

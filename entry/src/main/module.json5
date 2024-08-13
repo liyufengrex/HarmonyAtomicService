@@ -19,7 +19,7 @@
         "name": "ohos.permission.LOCATION",
         "reason": "$string:app_location_reason",
         "usedScene": {
-          "abilities" :  [
+          "abilities": [
             "EntryAbility"
           ],
           "when": "inuse"
@@ -27,7 +27,7 @@
       },
       {
         "name": "ohos.permission.APPROXIMATELY_LOCATION",
-        "reason":"$string:app_location_reason",
+        "reason": "$string:app_location_reason",
         "usedScene": {
           "abilities": [
             "EntryAbility"
@@ -48,8 +48,8 @@
         "name": "EntryAbility",
         "srcEntry": "./ets/entryability/EntryAbility.ets",
         "description": "$string:EntryAbility_desc",
-        "icon": "$media:icon",
-        "label": "$string:EntryAbility_label",
+        "icon": "$media:labelIcon",
+        "label": "$string:app_label",
         "startWindowIcon": "$media:startIcon",
         "startWindowBackground": "$color:start_window_background",
         "exported": true,

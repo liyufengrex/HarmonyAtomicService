@@ -15,6 +15,10 @@
     {
       "name": "EntryAbility_label",
       "value": "HarmonyAtomicService"
+    },
+    {
+      "name": "app_label",
+      "value": "元服务开发示例"
     }
   ]
 }
