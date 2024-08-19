@@ -106,10 +106,10 @@ request.excute().then((data)=>{
   // 这里获取的 data 类型为 CommonResponseModel<BusinessModel>
 })
 ```
-+ [路由如何选择和使用](https://juejin.cn/post/7369120920148213795)
-+ [自定义弹窗解耦](https://juejin.cn/post/7352100456334721034)
-+ [面相对象的 EventBus 封装](https://juejin.cn/post/7352075796712964122)
-+ [扩展修饰器，实现节流、防抖、权限申请](https://juejin.cn/post/7373194499530244136)
+#### [路由如何选择和使用](https://juejin.cn/post/7369120920148213795)
+#### [自定义弹窗解耦](https://juejin.cn/post/7352100456334721034)
+#### [面相对象的 EventBus 封装](https://juejin.cn/post/7352075796712964122)
+#### [扩展修饰器，实现节流、防抖、权限申请](https://juejin.cn/post/7373194499530244136)
 ```ts
 // 修饰器实现节流，示例如下，2秒内多次点击只会触发第一次
 
@@ -131,7 +131,7 @@ onClickTap(name: string) {
   this.count++
 }
 ```
-+ [动态路由]()
+#### [动态路由]()
 ```ts
 // 示例请看 FastNavRouter，下面为关键代码
 
@@ -170,8 +170,8 @@ PageMap(name: string, params?: RouterModel) {
     }
 }
 ```
-+ [适配折叠屏](https://juejin.cn/post/7392252402496389172)
-+ 组件工厂
+#### [适配折叠屏](https://juejin.cn/post/7392252402496389172)
+#### 组件工厂
 ```ts
 // 声明
 @Builder
@@ -192,7 +192,7 @@ factoryMap.set('UI2', wrapBuilder(UI2))
 // 使用
 (factoryMap.get('UI1') as WrappedBuilder<[string]>).builder('工厂组件 - 1');
 ```
-+ 云函数
+#### 云函数
 文档：https://developer.huawei.com/consumer/cn/doc/harmonyos-guides-V5/cloudfoundation-call-function-V5
 云函数对应配置文件： AppScope/resources/rawfile/agconnect-services.json（在AGC对应项目中导出）
 ```ts
@@ -217,7 +217,7 @@ factoryMap.set('UI2', wrapBuilder(UI2))
     })
 ```
 ![](screenshots/cloud_func_demo.png)
-+ 云数据库
+#### 云数据库
 文档：https://developer.huawei.com/consumer/cn/doc/harmonyos-guides-V5/cloudfoundation-database-initialize-V5
 云数据库对应配置文件： entry/src/main/resources/rawfile/schema.json（AGC中选中云数据库，导出的对象类型模版）
 ```ts
