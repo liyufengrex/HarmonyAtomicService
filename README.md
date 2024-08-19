@@ -173,7 +173,8 @@ PageMap(name: string, params?: RouterModel) {
 }
 ```
 #### [适配折叠屏](https://juejin.cn/post/7392252402496389172)
-#### 组件工厂
+#### [UI动态节点操作（NodeController）](https://juejin.cn/post/7379423024556064803)
+#### [组件工厂 + 动态组件（AttributeModifier）](https://juejin.cn/post/7399478677396881443)
 ```ts
 // 声明
 @Builder
