@@ -91,6 +91,8 @@
 └──module.json5                               // 添加卡片拓展能力                         
 ```
 
+![](screenshots/sh_1.png)
+
 
 #### 让开发更简单，部分技巧总结
 
@@ -242,6 +244,4 @@ factoryMap.set('UI2', wrapBuilder(UI2))
 ![](screenshots/cloud_db_demo.png)
 
 
-### 整体项目示例包含如下内容：
-![](screenshots/sh_1.png)
 #### 持续更新中......
