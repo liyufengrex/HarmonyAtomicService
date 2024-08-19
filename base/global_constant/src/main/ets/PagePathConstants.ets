@@ -24,4 +24,8 @@ export default abstract class PagePathConstants {
   static COMPONENT_FACTORY_EXAMPLE: string = '/page/ComponentFactoryExample'
   // 组件动态属性示例
   static ATTRIBUTE_MODIFIER_EXAMPLE: string = '/page/AttributeModifierExample'
+  // 云函数调用示例
+  static CLOUD_FUNCTION_EXAMPLE: string = '/page/CloudFuncExample'
+  // 云数据库使用示例
+  static CLOUD_DATA_BASE_EXAMPLE: string = '/page/CloudDatabaseExample'
 }

@@ -51,6 +51,14 @@
     {
       "name": "attribute_modifier_example",
       "value": "组件动态属性设置示例"
+    },
+    {
+      "name": "cloud_function_example",
+      "value": "云函数调用"
+    },
+    {
+      "name": "cloud_data_base_example",
+      "value": "云数据库示例"
     }
   ]
 }

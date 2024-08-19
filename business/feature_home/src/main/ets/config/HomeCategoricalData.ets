@@ -56,6 +56,14 @@ export const COMMON_EXAMPLES: SubCategory[] =
       title: $r('app.string.attribute_modifier_example'),
       url: PagePathConstants.ATTRIBUTE_MODIFIER_EXAMPLE,
     },
+    {
+      title: $r('app.string.cloud_function_example'),
+      url: PagePathConstants.CLOUD_FUNCTION_EXAMPLE,
+    },
+    {
+      title: $r('app.string.cloud_data_base_example'),
+      url: PagePathConstants.CLOUD_DATA_BASE_EXAMPLE,
+    },
   ];
 
 export const HOME_CATEGORIES: Category[] =

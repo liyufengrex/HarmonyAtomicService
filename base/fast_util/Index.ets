@@ -11,3 +11,5 @@ export { Permission } from './src/main/ets/FastPermisttion'
 export { FastNavRouter, FastNavRouterModel } from './src/main/ets/FastNavRouter'
 
 export { PreferencesUtil } from './src/main/ets/PreferencesUtil'
+
+export { ObjectUtil } from './src/main/ets/ObjectUtil'

@@ -2,6 +2,8 @@ import { FastNavRouter, RouterModel } from '@ohos/fast_util/Index'
 import {
   AttributeModifierExample,
   BuilderNodeExample,
+  CloudDatabaseExample,
+  CloudFuncExample,
   ComponentFactoryExample,
   CustomDialogExample,
   EventBusExample,
@@ -105,6 +107,10 @@ struct MainPage {
         ComponentFactoryExample()
       } else if (name === PagePathConstants.ATTRIBUTE_MODIFIER_EXAMPLE) {
         AttributeModifierExample()
+      } else if (name === PagePathConstants.CLOUD_FUNCTION_EXAMPLE) {
+        CloudFuncExample()
+      } else if (name === PagePathConstants.CLOUD_DATA_BASE_EXAMPLE) {
+        CloudDatabaseExample()
       }
     }
   }

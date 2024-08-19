@@ -16,6 +16,7 @@
 + 折叠屏适配示例
 + 组件工厂示例
 + 组件动态属性设置示例
++ 云函数、云数据库使用示例
 
 项目结构描述
 
@@ -55,6 +56,8 @@
 │  │      ├──FixFoldUiExample.ets                 //折叠屏适配示例
 │  │      ├──ComponentFactoryExample.ets          //组件工厂示例
 │  │      ├──AttributeModifierExample.ets         //组件动态属性设置示例
+│  │      ├──CloudFuncExample.ets                 //云函数调用示例
+│  │      ├──CloudDatabaseExample.ets             //云数据库使用示例（增删改查）
 │  │      └──ThrottleExample.ets                  //使用注解防抖
 │  ├──feature_setting   
 │  │   └──/src/main/ets/pages  
@@ -189,7 +192,56 @@ factoryMap.set('UI2', wrapBuilder(UI2))
 // 使用
 (factoryMap.get('UI1') as WrappedBuilder<[string]>).builder('工厂组件 - 1');
 ```
++ 云函数
+文档：https://developer.huawei.com/consumer/cn/doc/harmonyos-guides-V5/cloudfoundation-call-function-V5
+云函数对应配置文件： AppScope/resources/rawfile/agconnect-services.json（在AGC对应项目中导出）
+```ts
+  // 云函数依赖
+  "@hw-agconnect/api-ohos": "^1.1.2",
+  "@hw-agconnect/core-ohos": "^1.1.2",
+  "@hw-agconnect/function-ohos": "^1.1.2",
+  "@hw-agconnect/credential-ohos": "^1.1.2",
+  "@hw-agconnect/base-ohos": "^1.1.2"
+  
+  关键代码：
+  cloudFunction.call({
+      name: "cloundfunction", //对应创建的云函数名称
+      version: "$latest", //如果不传入版本号，默认为“$latest”。
+      timeout: 10 * 1000, //单位为毫秒，默认为70*1000毫秒。
+      data: {
+        year: this.year,
+      }
+    }).then((value: cloudFunction.FunctionResult) => {
+      // 返回结果
+    }).catch((err: BusinessError) => {
+    })
+```
+![](screenshots/cloud_func_demo.png)
++ 云数据库
+文档：https://developer.huawei.com/consumer/cn/doc/harmonyos-guides-V5/cloudfoundation-database-initialize-V5
+云数据库对应配置文件： entry/src/main/resources/rawfile/schema.json（AGC中选中云数据库，导出的对象类型模版）
+```ts
+关键代码：
+// CodeLabDemo 是AGC开发平台上创建的存储区名称
+
+    let databaseZone = cloudDatabase.zone("CodeLabDemo");
+    let log = new LogReport();
+    log.id = new Date().getMilliseconds()
+    log.content = this.logContent;
+    log.time = this.getCurrentTime();
+    await databaseZone.upsert(log);
+    FastToast.shortToast(`写入成功`);
+```
+示例中数据库对象名称为`LogReport`,包含字段如下：
+
+| 字段      | 类型     | 备注    |
+|---------|--------|-------|
+| id      | int    | 主键    |
+| content | string | 上传的内容 |
+| time    | string | 修改的时间 |
+![](screenshots/cloud_db_demo.png)
 
 
+### 整体项目示例包含如下内容：
 ![](screenshots/sh_1.png)
 #### 持续更新中......

@@ -10,7 +10,13 @@
     "@ohos/fast_util": "file:../base/fast_util",
     "@ohos/global_constant": "file:../base/global_constant",
     "@ohos/feature_home": "file:../business/feature_home",
-    "@ohos/feature_setting": "file:../business/feature_setting"
+    "@ohos/feature_setting": "file:../business/feature_setting",
+    // 云函数依赖
+    "@hw-agconnect/api-ohos": "^1.1.2",
+    "@hw-agconnect/core-ohos": "^1.1.2",
+    "@hw-agconnect/function-ohos": "^1.1.2",
+    "@hw-agconnect/credential-ohos": "^1.1.2",
+    "@hw-agconnect/base-ohos": "^1.1.2"
   },
 }
 
