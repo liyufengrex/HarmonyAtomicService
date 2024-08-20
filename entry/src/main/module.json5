@@ -64,6 +64,13 @@
           }
         ]
       }
+    ],
+    "metadata": [
+      // 使用华为账号登录需要配置 clientID
+      {
+        "name": "client_id",
+        "value": "111763805"
+      },
     ]
   }
 }

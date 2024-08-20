@@ -1,6 +1,19 @@
 {
   "app": {
     "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "storePassword": "00000019D30858742D71B8F77D1CC4F8EF7A503B2AF22983D695625440CA16155B2E2A7CC4692E4660",
+          "certpath": "./certificate/debug/codeLab-Debug.cer",
+          "keyAlias": "codeLab",
+          "keyPassword": "000000196FFFFCDC47834EBEF46272885E5360BE50FFD27994799FFDDB3282638F2BF351F0C51C037E",
+          "profile": "./certificate/debug/codeLab-DebugDebug.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "./certificate/debug/code_lab.p12"
+        }
+      }
     ],
     "products": [
       {

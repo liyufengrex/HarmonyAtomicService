@@ -17,6 +17,7 @@
 + 组件工厂示例
 + 组件动态属性设置示例
 + 云函数、云数据库使用示例
++ 华为账号服务示例（快速登陆、快速验证手机号）
 
 项目结构描述
 
@@ -29,10 +30,11 @@
 | **global_constant** | 记录全局常量配置            | PagePathConstants (路由路径管理)                                                                                                                                                       |
 
 #### 业务库
-| 模块名称                | 描述                  | 备注 |
-|---------------------|---------------------|--|
-| **feature_home**    | 主要存放代码示例            | 静态包（har） |
-| **feature_hsp_page**    | 存放动态包交互示例            | 动态包（hsp/share） |
+| 模块名称                 | 描述         | 备注 |
+|----------------------|------------|--|
+| **feature_home**     | 主要存放代码示例   | 静态包（har） |
+| **feature_setting**  | 存放华为账号服务示例 | 静态包（har） |
+| **feature_hsp_page** | 存放动态包交互示例  | 动态包（hsp/share） |
 
 #### 工程目录
 ```ts
@@ -60,9 +62,15 @@
 │  │      ├──CloudDatabaseExample.ets             //云数据库使用示例（增删改查）
 │  │      └──ThrottleExample.ets                  //使用注解防抖
 │  ├──feature_setting   
-│  │   └──/src/main/ets/pages  
-│  │      ├──SettingPages.ets                     //首页的第二个Tab
-│  │      └──TestDynamicNavPage.ets               //测试动态路由示例
+│  │   └──/src/main/ets
+│  │      ├──pages    
+│  │      │   ├──SettingPages.ets                 //首页的第二个Tab（包含了华为账号服务示例）
+│  │      │   └──TestDynamicNavPage.ets           //测试动态路由示例
+│  │      ├──widget  
+│  │      │   ├──AccountQuickLoginButton.ets      //华为账号快速登陆按钮
+│  │      │   └──QuickVerifyPhoneButton.ets       //快速验证手机号按钮
+│  │      └──utils  
+│  │          └──LoginUtils.ets                   //Account-Kit 获取 UnionID 能力封装 
 ├──features                                       //放置动态包的文件夹
 │  ├──feature_has_page  
 │  │   └──/src/main/ets/pages  
@@ -243,6 +251,12 @@ factoryMap.set('UI2', wrapBuilder(UI2))
 | content | string | 上传的内容 |
 | time    | string | 修改的时间 |
 ![](screenshots/cloud_db_demo.png)
+#### 华为账号服务（华为账号快速登陆）
+
+文档： https://developer.huawei.com/consumer/cn/doc/harmonyos-guides-V5/account-quick-login-V5
++ 开发准备
+1. [配置client ID](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides-V5/account-client-id-V5)
+2. [配置权限](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides-V5/account-config-permissions-V5)，需要配置敏感权限
 
 
 #### 持续更新中......

@@ -6,6 +6,7 @@
   "author": "",
   "license": "Apache-2.0",
   "dependencies": {
+    "@ohos/fast_ui": "file:../../base/fast_ui",
     "@ohos/fast_util": "file:../../base/fast_util",
     "@ohos/global_constant": "file:../../base/global_constant"
   }

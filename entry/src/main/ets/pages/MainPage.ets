@@ -15,6 +15,7 @@ import {
   TestNavPathJumpPage,
   ThrottleExample
 } from '@ohos/feature_home/Index'
+import { SettingPage } from '@ohos/feature_setting'
 import { PagePathConstants } from '@ohos/global_constant/Index'
 import { FoldStatusObserver } from '../entryability/FoldStatusObserver'
 
@@ -139,7 +140,7 @@ struct MainPage {
             if (this.currentTab.type == TabItemEnum.home) {
               HomePage()
             } else {
-              Text('持续更新中...')
+              SettingPage()
             }
           }
           .tabBar(
