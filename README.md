@@ -250,6 +250,7 @@ factoryMap.set('UI2', wrapBuilder(UI2))
 | id      | int    | 主键    |
 | content | string | 上传的内容 |
 | time    | string | 修改的时间 |
+
 ![](screenshots/cloud_db_demo.png)
 #### 华为账号服务（华为账号快速登陆）
 
