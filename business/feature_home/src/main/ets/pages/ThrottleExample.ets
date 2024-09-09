@@ -1,6 +1,6 @@
 // 节流防抖 示例
 import { CommonFillButton } from '@ohos/fast_ui/Index'
-import { Debounce, FastLog, Permission, Throttle } from '@ohos/fast_util/Index'
+import { FastLog, Throttle } from '@ohos/fast_util/Index'
 
 @Component
 export struct ThrottleExample {

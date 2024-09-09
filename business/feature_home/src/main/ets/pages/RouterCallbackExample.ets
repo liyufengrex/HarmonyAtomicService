@@ -1,4 +1,3 @@
-import { CommonFillButton } from '@ohos/fast_ui/Index'
 import { FillFlexButton } from '@ohos/fast_ui/src/main/ets/styles/CommonButtonStyle';
 import { FastRouter, RouterModel } from '@ohos/fast_util/Index';
 import { PagePathConstants } from '@ohos/global_constant/Index';

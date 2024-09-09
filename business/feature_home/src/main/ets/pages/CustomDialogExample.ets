@@ -1,4 +1,4 @@
-import { CommonFillButton, FastToast } from '@ohos/fast_ui/Index'
+import { CommonFillButton } from '@ohos/fast_ui/Index'
 import { CustomDialogContainer, DialogContainerController } from '../dialog/CustomDialogContainer'
 
 @Component

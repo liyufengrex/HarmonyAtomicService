@@ -16,7 +16,6 @@ export struct CustomDialogContainer {
     }
   }
 
-  // 选择退款原因弹窗
   private async showDialog(): Promise<string | undefined> {
     let resolveFunc: (value: string | undefined | PromiseLike<string | undefined>) => void = () => {
     }
