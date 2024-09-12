@@ -96,16 +96,8 @@ struct SubCategoryItem {
         let param = new String(this.subItem.url)
         FastNavRouter.push({ builderName: this.subItem.url, param: param })
       } else {
-        this.navPathStack.pushPathByName(this.subItem?.url ?? '', new ABCParma())
+        this.navPathStack.pushPathByName(this.subItem?.url ?? '', null)
       }
     })
-  }
-}
-
-class ABCParma {
-  name: string = 'name'
-
-  test() : string {
-    return 'i am test';
   }
 }

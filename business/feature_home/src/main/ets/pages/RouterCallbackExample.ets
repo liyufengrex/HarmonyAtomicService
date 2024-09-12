@@ -39,7 +39,7 @@ export struct RouterCallbackExample {
   // router 跳转 hsp 并获取回调
   routerJump() {
     const routerParams: RouterModel = {
-      url: '@bundle:com.rex.harmony.atomic.service/feature_hsp_page/ets/pages/TestHspRoutePage',
+      url: '@bundle:com.atomicservice.5765880207855149405/feature_hsp_page/ets/pages/TestHspRoutePage',
       params: this.params2,
       popCallback: (callbackValue) => {
         if (callbackValue !== undefined) {
