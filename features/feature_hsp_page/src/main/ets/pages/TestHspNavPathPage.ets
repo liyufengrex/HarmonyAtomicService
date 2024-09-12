@@ -45,6 +45,7 @@ struct TestHspNavPathPage {
     .onReady((context: NavDestinationContext) => {
       this.pathStack = context.pathStack
       this.routerParams = context.pathInfo.param as RouterModel
+      this.receiveParams = this.routerParams.params as string
     })
   }
 }
